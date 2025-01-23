@@ -15,24 +15,24 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: CLK
-  ui[1]: operation type [3 bit]
-  ui[2]: operation type [3 bit]
-  ui[3]: operation type [3 bit]
-  ui[4]: operand value [4 bit]
-  ui[5]: operand value [4 bit]
-  ui[6]: operand value [4 bit]
-  ui[7]: operand value [4 bit]
+    - clock
+    - opcode 0th bit
+    - opcode 1st bit
+    - opcode 2nd bit
+    - operand 0th bit
+    - operand 1st bit
+    - operand 2nd bit
+    - operand 3rd bit
 
   # Outputs
-  uo[0]: value stored in the accumulator [4 bit]
-  uo[1]: value stored in the accumulator [4 bit]
-  uo[2]: value stored in the accumulator [4 bit]
-  uo[3]: value stored in the accumulator [4 bit]
-  uo[4]: unused (todo: zero, overflow flags)
-  uo[5]: unused (todo: zero, overflow flags)
-  uo[6]: unused (todo: zero, overflow flags)
-  uo[7]: carry flag
+    - accumulator value 0th bit
+    - accumulator value 1st bit
+    - accumulator value 2nd bit
+    - accumulator value 3rd bit
+    - unused (TODO: negative flag)
+    - unused (TODO: overflow flag)
+    - unused (TODO: zero flag)
+    - carry flag
 
   # Bidirectional pins
   uio[0]: ""
